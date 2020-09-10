@@ -1,14 +1,13 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux';
+
+import MembersContainer from './containers/memberContainer';
+import PersonasContainer from './containers/personaContainer';
+import NavBar from './components/navBar'
 
 class App extends React.Component {
-
-  componentDidMount(){
-    fetch('http://localhost:3000/api/v1/members')
-    .then(response => response.json())
-    .then(data => console.log(data))
-  }
 
   render() {
     return (
@@ -16,20 +15,16 @@ class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-           {this.data}
+            this is IRA!
+           
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <MembersContainer />
+        <PersonasContainer />
+        
         </header>
       </div>
     );
   }
 }
 
-export default App;
+export default connect()(App);
