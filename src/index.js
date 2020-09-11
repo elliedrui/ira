@@ -7,13 +7,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import memberReducer from './reducers/memberReducer'
+import personaReducer from './reducers/personaReducer'
+
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 
 
-let store = createStore(memberReducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(personaReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <Provider store={store}>
