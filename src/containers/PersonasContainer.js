@@ -15,7 +15,7 @@ class PersonasContainer extends React.Component {
     return(
       <div>
         woop woop changes inside the PersonasContainer
-        <Personas/>
+        <Personas personas={this.props.personas}/>
         <PersonasInput/>
       </div>
     )

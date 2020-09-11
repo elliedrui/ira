@@ -14,13 +14,13 @@ class App extends React.Component {
       <>
         <div className="App">
           <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
+            
             <p>
               this is IRA!      
             </p>
           </header>
         </div>
-          <div>  
+          <div className="App">  
             <MembersContainer />
             <PersonasContainer />
           </div>
