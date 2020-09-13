@@ -5,6 +5,8 @@ export default function personaReducer(state = {
     case 'FETCH_PERSONAS':
       
       return {personas: action.payload};
+    case 'ADD_PERSONA':
+      return {...state, personas: [...state.personas, action.payload]}
 
     default:
       return state;
