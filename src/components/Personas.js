@@ -1,21 +1,26 @@
-import React from 'react'
+import React from 'react';
+import Persona from './Persona';
+import {Card} from 'react-bootstrap';
 
 const Personas = (props) => {
-  console.log('in the perosna', props)
+  console.log('in the personas.js', props)
   return (
-  
-      <div className="App">
+
+      <>
+        
         <h2>Personas</h2>
         
         <table className="App" class='center' id='personas-table'>
-          <tr>
+          <thead>
             <th> ID </th>
             <th> Name </th>
             <th> Date of Birth </th>
             <th> Sex </th>
             <th> Race </th>
-            <th> Faction </th>
-          </tr>
+            <th> Notes </th>
+            <th> Faction <br/>Name </th>
+            <th> Member  <br/>Name </th>
+          </thead>
         
           <tr>
             <td>-------</td>
@@ -24,23 +29,20 @@ const Personas = (props) => {
             <td>-------</td>
             <td>--------------</td>
             <td>--------------</td>
-            <td>-------</td>
+            <td>-----------</td>
+            <td>-----------</td>
           </tr>  
           
         {props.personas.map(persona => 
-          <tr key={persona.id}>
-            <td>{persona.id}</td>
-            <td>{persona.attributes.first_name} {persona.attributes.last_name}</td>
-            <td>{persona.attributes.dob}</td>
-            <td>{persona.attributes.sex}</td>
-            <td>{persona.attributes.race}</td>
-            <td></td>
+          <tr key={persona.id}><Persona persona={persona}/>
+          
           </tr>
           )}
           </table>
-      </div>
-  
+         
+      </>
+
   )
-}
+};
 
 export default Personas
