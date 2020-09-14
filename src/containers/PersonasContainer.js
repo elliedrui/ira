@@ -13,14 +13,14 @@ class PersonasContainer extends React.Component {
 
   render() {
     return(
-      <div class="mx-auto" style={{ width: '600px' }}>
+      <div class="mx-auto" style={{ width: '900px' }}>
         
-        <Card class="mx-auto" style={{ width: '700px' }}>
+        <Card class="mx-auto" style={{ width: '900px' }}>
           
           <Personas personas={this.props.personas}/><br/>
         </Card>
         <br/>
-        <Card class="mx-auto" style={{ width: '700px' }}>
+        <Card class="mx-auto" style={{ width: '800px' }}>
           <PersonasInput/><br/>
         </Card>
       </div>  
