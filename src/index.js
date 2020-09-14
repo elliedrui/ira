@@ -34,7 +34,9 @@ let store = createStore(personaReducer, composeEnhancers(applyMiddleware(thunk))
 
 ReactDOM.render(
   <Provider store={store}>
+    <Router>
       <App />
+    </Router>
   </Provider>
   ,
   document.getElementById('root')

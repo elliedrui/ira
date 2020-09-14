@@ -1,5 +1,6 @@
 import React from 'react'
 import {addPersona} from '../actions/addPersona'
+
 import {connect} from 'react-redux'
 
 
@@ -31,12 +32,12 @@ handleChange = (event) => {
     this.setState({
         first_name: '',
         last_name: '', 
-        dob: null, 
+        dob: '', 
         sex: '', 
         race: '', 
         notes: '', 
-        member_id: null , 
-        faction_id: null
+        member_id: '' , 
+        faction_id: ''
     })
 
   };
@@ -44,6 +45,7 @@ handleChange = (event) => {
   render () {
     return(
       <div>
+        
         <h2>Create a new Persona</h2>
         <form onSubmit={this.handleSubmit}>
           <label>First Name</label>{' '}
@@ -85,6 +87,8 @@ handleChange = (event) => {
           <br/>
           <input type='submit' />
         </form>
+        <br/>
+      
       </div>
 
     )
