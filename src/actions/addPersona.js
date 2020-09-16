@@ -10,10 +10,11 @@ export const addPersona = (data) => {
       method: 'POST',
       body: JSON.stringify(data)
     })
-    .then(persona => dispatch({
-      type: 'ADD_PERSONA', 
-      payload: persona.data
-    }))
+    // .then(persona => dispatch({
+    //   type: 'ADD_PERSONA', 
+    //   payload: persona.data
+    // }))
+    .then(console.log('in the then', data))
     .then(response => response.json())
     .then(persona => dispatch({
       type: 'ADD_PERSONA', 
