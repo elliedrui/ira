@@ -1,11 +1,13 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {fetchPersonas} from '../actions/fetchPersonas'
-import {Route} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import {Card} from 'react-bootstrap';
 import Personas from '../components/Personas'
 import Persona from '../components/Persona'
 import PersonaInput from '../components/PersonaInput'
+
+
 
 class PersonasContainer extends React.Component {
 
@@ -15,15 +17,18 @@ class PersonasContainer extends React.Component {
 
   render() {
     return(
+      <>
+      <Card className="mx-auto" style={{ width: '900px' }}>
+        <Switch>
+          <Route path='/personas/new' component={PersonaInput} />
+          <Route path='/personas/:id' render={ (routerProps) => <Persona {...routerProps} personas={this.props.personas}/> } />
+          <Route path='/personas' render={ (routerProps) => <Personas {...routerProps} personas={this.props.personas}/> } />
+          <br/>
+          <br/>
+        </Switch>
+      </Card>   
       
-<Card class="mx-auto" style={{ width: '900px' }}>
-        <Route path='/personas/new' component={PersonaInput} />
-        <Route path='/personas/:id' render={ (routerProps) => <Persona {...routerProps} personas={this.props.personas}/> } />
-        <Route exact path='/personas' render={ (routerProps) => <Personas {...routerProps} personas={this.props.personas}/> } />
-        <br/>
-        <br/>
-        </Card>   
-      
+      </>
     )
   }
 }

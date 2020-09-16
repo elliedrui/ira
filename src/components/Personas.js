@@ -1,7 +1,7 @@
 import React from 'react';
-import Persona from './Persona';
-import {Route, Link} from 'react-router-dom'
-import {Card} from 'react-bootstrap';
+// import Persona from './Persona';
+import {Link} from 'react-router-dom'
+// import {Card} from 'react-bootstrap';
 
 const Personas = (props) => {
   console.log('in the personas.js', props)

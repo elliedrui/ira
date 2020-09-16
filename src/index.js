@@ -1,10 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  BrowserRouter as Router
 } from "react-router-dom";
 import {createStore, 
   applyMiddleware, 
