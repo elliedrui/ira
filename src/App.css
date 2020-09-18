@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  
+  background-image: url('https://i.imgur.com/GHnVMfg.jpg');
 }
 
 .App-logo {
@@ -14,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #566072;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,6 +24,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-container {
+  background-color: #566072;
+  
 }
 
 .App-link {

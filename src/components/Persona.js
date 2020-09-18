@@ -13,7 +13,7 @@ const Persona = (props) => {
         {persona ? null :<Redirect to='/personas'/> }
         <h2>{persona ? persona.attributes.first_name: null} {persona ? persona.attributes.last_name: null}</h2>
         
-        <table className="App" id='personas-table'>
+        <table className="App-container" id='personas-table'>
           <thead>
             <tr>
               <th> ID </th>

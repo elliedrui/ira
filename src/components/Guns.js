@@ -7,9 +7,13 @@ const Guns = (props) => {
   return (
 
     <>
-    <Card className="mx-auto" style={{ width: '500px' }}>
-      
-      Guns
+    <Card className="mx-auto" style={{ width: '75%' }}>
+      <li><h7>ID -  Model -    Description  -  Serial -Number</h7></li>
+      {props.guns && props.guns.map(gun => 
+        <li key={gun.id}>
+          {gun.id} - {gun.model} - {gun.description} - {gun.serial_number}
+        </li>
+        )}
       
       <br/>
     </Card>

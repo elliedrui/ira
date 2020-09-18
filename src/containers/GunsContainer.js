@@ -11,7 +11,7 @@ class GunsContainer extends React.Component {
     let persona = this.props.persona
     console.log("guncontainer", persona)
     return (
-      <div>
+      <div className="App-container" >
 
         GunsContainer yo
         <Guns guns={this.props.persona && this.props.persona.attributes.guns}/>

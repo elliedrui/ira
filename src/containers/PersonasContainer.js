@@ -18,14 +18,16 @@ class PersonasContainer extends React.Component {
   render() {
     return(
       <>
-      <Card className="mx-auto" style={{ width: '900px' }}>
-        <Switch>
-          <Route path='/personas/new' component={PersonaInput} />
-          <Route path='/personas/:id' render={ (routerProps) => <Persona {...routerProps} personas={this.props.personas}/> } />
-          <Route path='/personas' render={ (routerProps) => <Personas {...routerProps} personas={this.props.personas}/> } />
-          <br/>
-          <br/>
-        </Switch>
+      <Card className="mx-auto" style={{ width: '75%' }}>
+        <div className="App-container">
+          <Switch>
+            <Route path='/personas/new' component={PersonaInput} />
+            <Route path='/personas/:id' render={ (routerProps) => <Persona {...routerProps} personas={this.props.personas}/> } />
+            <Route path='/personas' render={ (routerProps) => <Personas {...routerProps} personas={this.props.personas}/> } />
+            <br/>
+            <br/>
+          </Switch>
+        </div>
       </Card>   
       
       </>
