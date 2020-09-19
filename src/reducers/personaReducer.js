@@ -19,6 +19,16 @@ export default function personaReducer(state = {
         }
       })
       return {...state, personas: personas}
+    case 'ADD_ADDRESS':
+    
+      let personasFour = state.personas.map(persona => {
+        if (persona.id === action.payload.id ) {
+          return action.payload
+        } else {
+          return persona
+        }
+      })
+      return {...state, personas: personasFour}
     case 'DELETE_GUN':
       let personasTwo = state.personas.map(persona => {
         if (persona.id === action.payload.id) {

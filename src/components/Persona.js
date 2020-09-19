@@ -2,6 +2,7 @@ import React from 'react'
 import { Redirect } from 'react-router-dom'
 import GunsContainer from '../containers/GunsContainer';
 import {Card} from 'react-bootstrap';
+import AddressesContainer from '../containers/AddressesContainer';
 
 const Persona = (props) => {
 
@@ -52,6 +53,7 @@ const Persona = (props) => {
 
         <Card>
           <GunsContainer persona={persona}/>
+          <AddressesContainer persona={persona}/>
         </Card>
       </div>
     )
