@@ -6,19 +6,19 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar'
 // import MembersContainer from './containers/MembersContainer';
 import PersonasContainer from './containers/PersonasContainer';
-// import NavBar from './components/navBar'
+
 
 class App extends React.Component {
 
   render() {
     return (
-      <>     
+      <div className='mx-auto d-block'>     
           <div className="App"> 
             <NavBar /><br/>
             {/* <MembersContainer /><br/> */}
             <PersonasContainer /><br/>
           </div>
-      </>
+      </div>
     );
   }
 }
