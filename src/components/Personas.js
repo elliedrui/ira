@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 // import {Card} from 'react-bootstrap';
 
 const Personas = (props) => {
-  console.log('in the personas.js', props)
+  console.log('in the personas.js', props.persona)
   return (
 
       <>

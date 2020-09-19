@@ -9,13 +9,13 @@ class GunsContainer extends React.Component {
 
   render () {
     let persona = this.props.persona
-    console.log("guncontainer", persona)
+    console.log("guncontainer", this.props)
     return (
       <div className="App-container" >
 
         GunsContainer yo
         <Guns guns={this.props.persona && this.props.persona.attributes.guns}/>
-        <GunInput/>
+        <GunInput personaId={persona && persona.id} memberId={ persona && persona.attributes.member.id}/> 
 
       </div>
 

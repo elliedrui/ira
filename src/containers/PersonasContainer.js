@@ -12,13 +12,15 @@ import PersonaInput from '../components/PersonaInput'
 class PersonasContainer extends React.Component {
 
   componentDidMount(props) {
+    console.log('in the personacontainer', this)
     this.props.fetchPersonas()
+    console.log('in the personacontainer1', this)
   }
-
+  
   render() {
     return(
-      <>
-      <Card className="mx-auto" style={{ width: '75%' }}>
+      <div className='mx-auto d-block' >
+      <Card>
         <div className="App-container">
           <Switch>
             <Route path='/personas/new' component={PersonaInput} />
@@ -30,7 +32,7 @@ class PersonasContainer extends React.Component {
         </div>
       </Card>   
       
-      </>
+      </div>
     )
   }
 }

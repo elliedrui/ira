@@ -12,13 +12,13 @@ class App extends React.Component {
 
   render() {
     return (
-      <>     
+      <div className='mx-auto d-block'>     
           <div className="App"> 
             <NavBar /><br/>
             {/* <MembersContainer /><br/> */}
             <PersonasContainer /><br/>
           </div>
-      </>
+      </div>
     );
   }
 }

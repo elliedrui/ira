@@ -6,10 +6,11 @@ import {Card} from 'react-bootstrap';
 const Persona = (props) => {
 
   console.log('in persona', props)
-  
-    let persona = props.personas[props.match.params.id - 1]
+  // debugger
+    // let persona = props.personas[props.match.params.id - 1]
+    let persona = props.personas.filter(persona => persona.id === props.match.params.id)[0]
     return (
-      <>
+      <div className="mx-auto d-block">
         {persona ? null :<Redirect to='/personas'/> }
         <h2>{persona ? persona.attributes.first_name: null} {persona ? persona.attributes.last_name: null}</h2>
         
@@ -49,10 +50,10 @@ const Persona = (props) => {
           </tbody>
         </table>
 
-        <Card className="mx-auto" style={{ width: '700px' }}>
+        <Card>
           <GunsContainer persona={persona}/>
         </Card>
-      </>
+      </div>
     )
   
 }

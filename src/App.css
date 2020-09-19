@@ -35,6 +35,11 @@
   color: #61dafb;
 }
 
+.App-footer {
+
+  background-image: 'https://i.imgur.com/w8A7pxF.png';
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

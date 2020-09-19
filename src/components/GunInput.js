@@ -1,12 +1,18 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {addGun} from '../actions/addGun';
+
 
 class GunInput extends React.Component {
+  
+  personaId = this.props.id;
 
   state = {
     model: '',
     serial_number: '',
     description: '',
-    persona_id: '',
+    persona_id: this.props.personaId,
+    member_id: this.props.memberId
   };
 
   handleChange = (event) => {
@@ -15,16 +21,22 @@ class GunInput extends React.Component {
     })
   };
 
-  handlesubmit = (event) => {
+  handleSubmit = (event) => {
     event.preventDefault()
+    console.log('handlesubmit', this)
     alert('GUN!')
-    this.props.addGun(this.state)
+    this.props.addGun(this.state, this.props.personaId, this.props.memberId)
     this.setState({
+      model: '',
+      serial_number: '',
+      description: '',
+      persona_id: this.props.personaId,
+      member_id: this.props.memberId
     })
   };
-
+ 
   render() {
-
+    console.log('in the gunput', this)
     return (
 
       <div>
@@ -40,6 +52,7 @@ class GunInput extends React.Component {
           <label>Description / Notes</label>
           <input type='text' placeholder='description' value={this.state.description} name='description' onChange={this.handleChange} />
           <input type='hidden' value={this.state.persona_id} name='persona_id'/>
+          <input type='hidden' value={this.state.member_id} name='member_id'/>
           <input type='submit'/>
 
         </form>
@@ -48,4 +61,4 @@ class GunInput extends React.Component {
   };
 };
 
-export default GunInput
+export default connect(null, {addGun})(GunInput)
