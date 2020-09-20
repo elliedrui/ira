@@ -19,8 +19,8 @@ class PersonasContainer extends React.Component {
   
   render() {
     return(
-      <div className='mx-auto d-block' >
-      <Card>
+      
+      
         <div className="App-container">
           <Switch>
             <Route path='/personas/new' component={PersonaInput} />
@@ -30,9 +30,6 @@ class PersonasContainer extends React.Component {
             <br/>
           </Switch>
         </div>
-      </Card>   
-      
-      </div>
     )
   }
 }

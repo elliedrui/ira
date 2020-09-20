@@ -39,10 +39,11 @@ class GunInput extends React.Component {
     console.log('in the gunput', this)
     return (
 
-      <div>
-        <h2>
+      <div class="col-sm d-flex">
+      <div className='card card-body flex-fill'>
+        <h4>
           Register a New Gun
-        </h2>
+        </h4>
         <form onSubmit={this.handleSubmit}>
 
           <label>Model</label>
@@ -56,6 +57,7 @@ class GunInput extends React.Component {
           <input type='submit'/>
 
         </form>
+      </div>
       </div>
     )
   };
