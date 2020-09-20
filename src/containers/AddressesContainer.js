@@ -10,11 +10,14 @@ class AddressesContainer extends React.Component {
     console.log("Addresses container", this.props)
 
     return (
-      <div className="App-container">
-        Addresses Conatainer Yo!
+      <>
+        <br/>
+        <h2>Addresses</h2>
         <Addresses addresses={this.props.persona && this.props.persona.attributes.addresses}/>
         <AddressInput personaId={persona && persona.id} memberId={ persona && persona.attributes.member.id}/> 
-      </div>
+        <br/>
+      </>
+      
     )
   }
 

@@ -20,7 +20,7 @@ export default function personaReducer(state = {
       })
       return {...state, personas: personas}
     case 'ADD_ADDRESS':
-    
+      console.log('in the case add address', action.payload)
       let personasFour = state.personas.map(persona => {
         if (persona.id === action.payload.id ) {
           return action.payload

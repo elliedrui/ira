@@ -7,14 +7,38 @@ const Addresses = (props) => {
   return (
 
     <>
-    <Card>
-      <li><h6> Addresses</h6></li>
-      {props.addresses && props.addresses.map(address => 
-        <li key={address.id}>
-          Street number and name: {address.street_number}  {address.street_name}  Zip: {address.zip_code}  Apt No: {address.apt_number}  Unit Type:{address.unit_type}  Has Interior: {address.has_interior}
-        </li>
-        )}
-    </Card>
+    <div class="col-sm d-flex">
+    <div className='card card-body flex-fill'>
+      
+        <table className="App-table" id='personas-table'>
+          <thead>
+            <tr>
+              <th> Street Name </th>
+              <th> Street Number </th>
+              <th> Zip Code </th>
+              <th> Apartment Number </th>
+              <th> Unit Type </th>
+              <th> Has Interior <br/>Name </th>
+              
+            </tr> 
+          </thead>
+          
+          <tbody>
+          {props.addresses && props.addresses.map(address => 
+            <tr>
+              <td>{address ? address.street_number: null}</td>
+              <td>{address ? address.street_name: null}</td>
+              <td>{address ? address.zip_code: null}</td>
+              <td>{address ? address.apt_number: null}</td>
+              <td>{address ? address.unit_type: null}</td>
+              <td>{address ? address.has_interior: null}</td>
+              <td></td> 
+            </tr>
+            )}
+          </tbody>
+        </table>
+        </div>
+      </div>
     </>
 
   )

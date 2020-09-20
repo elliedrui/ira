@@ -1,7 +1,7 @@
 export const addAddress = (addressData, personaId, memberId) => {
-  console.log('in the add', addressData, personaId, memberId)
+  console.log('in the add address', addressData, personaId, memberId)
   return (dispatch) => {
-    // debugger
+    debugger
     fetch(`http://localhost:3000/api/v1/members/${memberId}/personas/${personaId}/addresses`, {
       method: 'POST',
       headers: {
