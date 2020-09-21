@@ -44,7 +44,7 @@ class GunInput extends React.Component {
         <h4>
           Register a New Gun
         </h4>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} inline>
 
           <label>Model</label>
           <input type='text' placeholder='model' value={this.state.model} name='model' onChange={this.handleChange} />
