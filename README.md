@@ -1,4 +1,6 @@
 ## IRA - Illender's React Application-inator
+Illender's React Application-inator (IRA), a React front end for Illender's Roleplay Management Application-inator (IRMA).
+This application is designed to allow for the tracking of personas for online FiveM and RageMultiplayer Gta V Roleplay communities. Database management is handled by the backend API, known as IRMA (https://github.com/JaesonWatts/irma-backend).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
