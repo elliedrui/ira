@@ -3,9 +3,10 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavBar from './components/NavBar'
+import {NavigationBar} from './components/NavBar'
 // import MembersContainer from './containers/MembersContainer';
 import PersonasContainer from './containers/PersonasContainer';
+import Sidebar from './components/SideBar';
 
 
 class App extends React.Component {
@@ -14,9 +15,13 @@ class App extends React.Component {
     return (
       <div className='mx-auto d-block'>     
           <div className="App"> 
-            <NavBar /><br/>
+            <NavigationBar /><br/>
+            <Sidebar />
             {/* <MembersContainer /><br/> */}
-            <PersonasContainer /><br/>
+            { //check if route is '/'
+              ()
+              <PersonasContainer /><br/>
+              }
           </div>
       </div>
     );
