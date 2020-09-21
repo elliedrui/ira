@@ -7,6 +7,7 @@ import {NavigationBar} from './components/NavBar'
 // import MembersContainer from './containers/MembersContainer';
 import PersonasContainer from './containers/PersonasContainer';
 import Sidebar from './components/SideBar';
+import Home from './components/Home'
 
 
 class App extends React.Component {
@@ -18,10 +19,10 @@ class App extends React.Component {
             <NavigationBar /><br/>
             <Sidebar />
             {/* <MembersContainer /><br/> */}
-            { //check if route is '/'
-              ()
+            
               <PersonasContainer /><br/>
-              }
+              <Home/>
+            
           </div>
       </div>
     );

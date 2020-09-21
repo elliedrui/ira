@@ -2,6 +2,12 @@
   text-align: center;
   justify-content: center;
   background-image: url('https://i.imgur.com/GHnVMfg.jpg');
+  max-height: 200%;
+  margin-top: -85;
+  margin-bottom: -85;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: auto;
 }
 
 .App-logo {
@@ -17,13 +23,14 @@
 
 .App-header {
   background-color: #566072;
-  min-height: 100vh;
-  display: flex;
+  
+  /* display: flex; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  height: 20px;
 }
 
 .App-container {
@@ -43,7 +50,17 @@
 .App-footer {
   text-align: center;
   justify-content: center;
-  background-image: 'https://i.imgur.com/w8A7pxF.png';
+  background-image: url('https://i.imgur.com/w8A7pxF.png');
+  height: 20px;
+  margin: auto;
+  width: 100%;
+  background: #222;
+  color: rgb(73, 34, 34);
+  border: groove;
+  position: relative;
+  bottom: 5%;
+  
+  /* left: 0; */
 }
 
 @keyframes App-logo-spin {

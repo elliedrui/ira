@@ -26,15 +26,15 @@ class SideNav extends React.Component {
                   key: 1 /* Key is required, else console throws error. Does this please you Mr. Browser?! */
                 },
                 {
-                  path: '/about',
-                  name: 'About',
-                  css: 'fa fa-fw fa-clock',
+                  path: '/personas',
+                  name: 'Personas',
+                  css: 'fa fa-fw fa-users',
                   key: 2
                 },
                 {
-                  path: '/NoMatch',
-                  name: 'NoMatch',
-                  css: 'fas fa-hashtag',
+                  path: '/personas/new',
+                  name: 'Create New Persona',
+                  css: 'fa fa-user-plus aria-hidden="true"',
                   key: 3
                 },
               ]
@@ -49,7 +49,7 @@ class SideNav extends React.Component {
         const { items, activePath } = this.state;
         return(
             <StyledSideNav>
-                {/* {
+                {
                     items.map((item) => {
                         return (
                             <NavItem 
@@ -62,7 +62,7 @@ class SideNav extends React.Component {
                             />
                         );
                     })
-                } */}
+                }
             </StyledSideNav>
         );
     }
