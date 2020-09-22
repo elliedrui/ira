@@ -20,24 +20,24 @@ class SideNav extends React.Component {
             activePath: props.location.pathname,
             items: [
                 {
-                  path: '/', /* path is used as id to check which NavItem is active basically */
-                  name: 'Home',
-                  css: 'fa fa-fw fa-home',
-                  key: 1 /* Key is required, else console throws error. Does this please you Mr. Browser?! */
+                    path: '/', /* path is used as id to check which NavItem is active basically */
+                    name: 'Home',
+                    css: 'fa fa-fw fa-home',
+                    key: 1 /* Key is required, else console throws error. Does this please you Mr. Browser?! */
                 },
                 {
-                  path: '/personas',
-                  name: 'Personas',
-                  css: 'fa fa-fw fa-users',
-                  key: 2
+                    path: '/personas',
+                    name: 'Personas',
+                    css: 'fa fa-fw fa-users',
+                    key: 2
                 },
                 {
-                  path: '/personas/new',
-                  name: 'Create New Persona',
-                  css: 'fa fa-user-plus aria-hidden="true"',
-                  key: 3
+                    path: '/personas/new',
+                    name: 'Create New Persona',
+                    css: 'fa fa-user-plus aria-hidden="true"',
+                    key: 3
                 },
-              ]
+            ]
         }
     }
 

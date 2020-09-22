@@ -3,11 +3,12 @@ import React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {NavigationBar} from './components/NavBar'
+import {NavigationBar} from './components/NavBar';
 // import MembersContainer from './containers/MembersContainer';
 import PersonasContainer from './containers/PersonasContainer';
 import Sidebar from './components/SideBar';
-import Home from './components/Home'
+import Home from './components/Home';
+
 
 
 class App extends React.Component {
@@ -19,8 +20,9 @@ class App extends React.Component {
             <NavigationBar /><br/>
             <Sidebar />
             {/* <MembersContainer /><br/> */}
-            
+              
               <PersonasContainer /><br/>
+              
               <Home/>
             
           </div>

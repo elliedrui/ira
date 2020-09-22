@@ -21,6 +21,7 @@ class GunInput extends React.Component {
     })
   };
 
+
   handleSubmit = (event) => {
     event.preventDefault()
     console.log('handlesubmit', this)
